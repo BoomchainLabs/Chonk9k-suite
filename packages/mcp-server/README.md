@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:BoomchainLabs/lerf-rewards-hub.git
-cd lerf-rewards-hub
+git clone git@github.com:BoomchainLabs/Chonk9k-suite.git
+cd Chonk9k-suite
 ./scripts/bootstrap
 ./scripts/build
 ```
@@ -41,7 +41,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "earn_app_api": {
       "command": "node",
-      "args": ["/path/to/local/lerf-rewards-hub/packages/mcp-server", "--client=claude", "--tools=all"],
+      "args": ["/path/to/local/Chonk9k-suite/packages/mcp-server", "--client=claude", "--tools=all"],
       "env": {
         "EARN_APP_API_KEY": "My API Key",
         "EARN_APP_ENVIRONMENT": "production"

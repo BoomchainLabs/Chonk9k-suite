@@ -8,10 +8,10 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoomchainLabs/lerf-rewards-hub.git",
+    "url": "git+https://github.com/BoomchainLabs/Chonk9k-suite.git",
     "directory": "packages/mcp-server"
   },
-  "homepage": "https://github.com/BoomchainLabs/lerf-rewards-hub/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/BoomchainLabs/Chonk9k-suite/tree/main/packages/mcp-server#readme",
   "license": "MIT",
   "packageManager": "yarn@1.22.22",
   "private": false,
