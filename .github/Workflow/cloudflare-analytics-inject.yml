@@ -1,0 +1,48 @@
+name: Inject Cloudflare Web Analytics
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  inject-analytics:
+    runs-on: ubuntu-latest
+
+    env:
+      CLOUDFLARE_TOKEN: "e4b923958de44d75892305af2447e5e3"
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Inject Cloudflare Analytics into _document.tsx
+        run: |
+          FILE="pages/_document.tsx"
+          LEGACY_TOKENS=("3db3ea6fafbf423a960b45e3eff3582a" "27ad8ff320284229a3dcacb10b7d9e84")
+          for OLD in "${LEGACY_TOKENS[@]}"; do
+            sed -i "/$OLD/d" "$FILE"
+          done
+          SCRIPT="<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"$CLOUDFLARE_TOKEN\"}'></script>"
+          if grep -q "$CLOUDFLARE_TOKEN" "$FILE"; then
+            echo "✅ Analytics already injected."
+          else
+            sed -i "/<Head>/a\\
+              $SCRIPT" "$FILE"
+            echo "✅ Injected analytics script."
+          fi
+
+      - name: Commit & Push changes
+        run: |
+          git config user.name "boomchainlab-ci"
+          git config user.email "support@boomchainlab.com"
+          git add .
+          git commit -m "feat(ci): inject Cloudflare Web Analytics"
+          git push
+
+      - name: Notify via Slack (if enabled)
+        if: env.SLACK_WEBHOOK_URL != ''
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ Cloudflare Analytics injected into *chonk9k-suite* on `main`."}' \
+          "$SLACK_WEBHOOK_URL"
