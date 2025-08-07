@@ -20,12 +20,12 @@
   resolved "https://registry.yarnpkg.com/@andrewbranch/untar.js/-/untar.js-1.0.3.tgz#ba9494f85eb83017c5c855763969caf1d0adea00"
   integrity sha512-Jh15/qVmrLGhkKJBdXlK1+9tY4lZruYjsgkDFj08ZmDiWVBLJcqkok7Z0/R0In+i1rScBpJlSvrTS2Lm41Pbnw==
 
-"@arethetypeswrong/cli@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@arethetypeswrong/cli/-/cli-0.17.0.tgz#f97f10926b3f9f9eb5117550242d2e06c25cadac"
-  integrity sha512-xSMW7bfzVWpYw5JFgZqBXqr6PdR0/REmn3DkxCES5N0JTcB0CVgbIynJCvKBFmXaPc3hzmmTrb7+yPDRoOSZdA==
+"@arethetypeswrong/cli@^0.18.0":
+  version "0.18.2"
+  resolved "https://registry.yarnpkg.com/@arethetypeswrong/cli/-/cli-0.18.2.tgz#7c196e1b1549fcf77d84eacbcc47cab2cc6593dd"
+  integrity sha512-PcFM20JNlevEDKBg4Re29Rtv2xvjvQZzg7ENnrWFSS0PHgdP2njibVFw+dRUhNkPgNfac9iUqO0ohAXqQL4hbw==
   dependencies:
-    "@arethetypeswrong/core" "0.17.0"
+    "@arethetypeswrong/core" "0.18.2"
     chalk "^4.1.2"
     cli-table3 "^0.6.3"
     commander "^10.0.1"
@@ -33,15 +33,16 @@
     marked-terminal "^7.1.0"
     semver "^7.5.4"
 
-"@arethetypeswrong/core@0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@arethetypeswrong/core/-/core-0.17.0.tgz#abb3b5f425056d37193644c2a2de4aecf866b76b"
-  integrity sha512-FHyhFizXNetigTVsIhqXKGYLpazPS5YNojEPpZEUcBPt9wVvoEbNIvG+hybuBR+pjlRcbyuqhukHZm1fr+bDgA==
+"@arethetypeswrong/core@0.18.2":
+  version "0.18.2"
+  resolved "https://registry.yarnpkg.com/@arethetypeswrong/core/-/core-0.18.2.tgz#9be36d92ff5e65aae7a7683e7947cbeb41aa8e05"
+  integrity sha512-GiwTmBFOU1/+UVNqqCGzFJYfBXEytUkiI+iRZ6Qx7KmUVtLm00sYySkfe203C9QtPG11yOz1ZaMek8dT/xnlgg==
   dependencies:
     "@andrewbranch/untar.js" "^1.0.3"
+    "@loaderkit/resolve" "^1.0.2"
     cjs-module-lexer "^1.2.3"
     fflate "^0.8.2"
-    lru-cache "^10.4.3"
+    lru-cache "^11.0.1"
     semver "^7.5.4"
     typescript "5.6.1-rc"
     validate-npm-package-name "^5.0.0"
@@ -332,6 +333,11 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
+
+"@braidai/lang@^1.0.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@braidai/lang/-/lang-1.1.1.tgz#ee5fc16f601050744763b8afceed39d9a23e0fc5"
+  integrity sha512-5uM+no3i3DafVgkoW7ayPhEGHNNBZCSj5TrGDQt0ayEKQda5f3lAXlmQg0MR5E0gKgmTzUUEtSWHsEC3h9jUcg==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -692,6 +698,13 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
+
+"@loaderkit/resolve@^1.0.2":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@loaderkit/resolve/-/resolve-1.0.4.tgz#5ba1c2f4cc879d3fb2f066b71b8dc41a88bfb8e9"
+  integrity sha512-rJzYKVcV4dxJv+vW6jlvagF8zvGxHJ2+HTr1e2qOejfmGhAApgJHl8Aog4mMszxceTRiKTTbnpgmTO1bEZHV/A==
+  dependencies:
+    "@braidai/lang" "^1.0.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -2536,10 +2549,10 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-lru-cache@^10.4.3:
-  version "10.4.3"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
-  integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
+lru-cache@^11.0.1:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-11.1.0.tgz#afafb060607108132dbc1cf8ae661afb69486117"
+  integrity sha512-QIXZUBJUx+2zHUdQujWejBkcD9+cs94tLn0+YL8UrCh+D5sCXZ4c7LaEH48pNwRY3MLDgqUFyhlCyjJPf1WP0A==
 
 lru-cache@^5.1.1:
   version "5.1.1"
