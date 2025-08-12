@@ -8,16 +8,15 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "baseUrl": "./",
+
     "paths": {
       "earn-app/*": ["src/*"],
       "earn-app": ["src/index.ts"]
     },
+
     "noEmit": true,
-
     "resolveJsonModule": true,
-
     "forceConsistentCasingInFileNames": true,
-
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -32,7 +31,13 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "isolatedModules": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "inlineSources": true,
 
-    "skipLibCheck": true
+    // Set `sourceRoot` to  "/" to strip the build path prefix
+    // from generated source code references.
+    // This improves issue grouping in Sentry.
+    "sourceRoot": "/"
   }
 }

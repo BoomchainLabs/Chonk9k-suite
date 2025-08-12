@@ -1,0 +1,31 @@
+/* styles.css */
+body {
+  background-color: #f4f4f4; /* Light grey background */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: white; /* Card white background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+h1 {
+  color: #333; /* Dark text color */
+}
+
+.button {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  padding: 10px 15px;
+  border: none; 
+  border-radius: 5px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.button:hover {
+  background-color: #218838; /* Darker green on hover */
+}

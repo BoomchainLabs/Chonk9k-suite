@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "ec7b100c-d019-4dc2-bf02-d9c955582c7e"
+      }
+    },
+    "android": {
+      "package": "com.boomchainlabs.earnapp"
+    }
+  }
+}
