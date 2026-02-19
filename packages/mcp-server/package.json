@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "earn-app": "file:../../dist/",
-    "@modelcontextprotocol/sdk": "^1.11.5",
+    "@modelcontextprotocol/sdk": "^1.26.0",
     "yargs": "^17.7.2",
     "@cloudflare/cabidela": "^0.2.4",
     "zod": "^3.25.20",
